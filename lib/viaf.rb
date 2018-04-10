@@ -17,7 +17,7 @@ module Marcxml
     def initialize(node, namespace={'marc' => "http://www.loc.gov/MARC21/slim"})
       @namespace = namespace
       @node = node
-      @methods = [ :make_leader, :make_008, :replace_square_brackets ]
+      @methods = [ :make_leader, :replace_square_brackets ]
     end
 
 
@@ -26,15 +26,6 @@ module Marcxml
       tag = Nokogiri::XML::Node.new "leader", node
       tag.content = leader_string
       node.root.children.first.add_previous_sibling(tag)
-    end
-
-    def make_008
-      today = Time.now.strftime("%y%m%d")
-      string = "#{today}"
-      tag = Nokogiri::XML::Node.new "controlfield", node
-      tag['tag'] = '008'
-      tag.content = string
-      node.root << tag
     end
 
     def replace_square_brackets
