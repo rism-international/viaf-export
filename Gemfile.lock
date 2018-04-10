@@ -1,0 +1,38 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    awesome_print (1.8.0)
+    axlsx (2.0.1)
+      htmlentities (~> 4.3.1)
+      nokogiri (>= 1.4.1)
+      rubyzip (~> 1.0.0)
+    coderay (1.1.2)
+    colorize (0.8.1)
+    htmlentities (4.3.4)
+    method_source (0.9.0)
+    mini_portile2 (2.3.0)
+    nokogiri (1.8.2)
+      mini_portile2 (~> 2.3.0)
+    pry (0.11.3)
+      coderay (~> 1.1.0)
+      method_source (~> 0.9.0)
+    ruby-progressbar (1.9.0)
+    rubyzip (1.0.0)
+    trollop (2.1.2)
+    zip (2.0.2)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  awesome_print
+  axlsx
+  colorize
+  nokogiri
+  pry
+  ruby-progressbar
+  trollop
+  zip
+
+BUNDLED WITH
+   1.16.1
