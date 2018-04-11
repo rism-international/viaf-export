@@ -17,7 +17,7 @@ module Marcxml
     def initialize(node, namespace={'marc' => "http://www.loc.gov/MARC21/slim"})
       @namespace = namespace
       @node = node
-      @methods = [ :make_leader, :replace_square_brackets ]
+      @methods = [ :map, :make_leader, :replace_square_brackets ]
     end
 
 
