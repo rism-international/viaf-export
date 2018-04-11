@@ -179,15 +179,13 @@ module Marcxml
       leader.content = leader.content.gsub(/#/," ")
     end
 
-    def insert_leader
-      leader = node.xpath("//marc:leader", NAMESPACE).first
-      unless leader
-        leader = Nokogiri::XML::Node.new "leader", node
-        # Dummy leader
-        leader.content="00000ndd a2200000 u 4500"
-        node.root.children.first.add_previous_sibling(leader)
-      end
+    def make_leader
+      leader_string = "00000nz a2200037n 45 0"
+      tag = Nokogiri::XML::Node.new "leader", node
+      tag.content = leader_string
+      node.root.children.first.add_previous_sibling(tag)
     end
+
 # Records have dot or komma at end
     def fix_dots
       fields = %w(100$a 100$d 240$a 300$a 710$a 700$a 700$d)
