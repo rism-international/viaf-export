@@ -5,7 +5,7 @@ require 'rbconfig'
 Dir[ ROOT_DIR + 'lib/*.rb'].each {|file| require file }
 
 module Marcxml
-  class Person < Transformator
+  class Source < Transformator
     include Helper
     NAMESPACE={'marc' => "http://www.loc.gov/MARC21/slim"}
     include Logging
@@ -18,7 +18,7 @@ module Marcxml
     def initialize(node, namespace={'marc' => "http://www.loc.gov/MARC21/slim"})
       @namespace = namespace
       @node = node
-      @methods = [ :map, :make_leader, :add_id_prefix ]
+      @methods = [ :add_id_prefix ]
     end
 
   end

@@ -11,7 +11,7 @@ require 'colorize'
 
 NAMESPACE={'marc' => "http://www.loc.gov/MARC21/slim"}
 SCHEMA_FILE="conf/MARC21slim.xsd"
-ROOT_DIR='/home/dev/projects/viaf/'
+ROOT_DIR='/home/dev/projects/viaf-export/'
 #OPTIONS
 opts = Trollop::options do
   version "RISM Marcxml 0.1 (2016.07)"
